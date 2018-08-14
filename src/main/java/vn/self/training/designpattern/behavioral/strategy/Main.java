@@ -1,5 +1,7 @@
 package vn.self.training.designpattern.behavioral.strategy;
 
+import java.util.function.Function;
+
 public class Main {
     public static void main(String args[]) {
         Duck mallarDuck = new MallarDuck(new FlyWithWings(), new Quack());
@@ -25,5 +27,10 @@ public class Main {
         modelDuck.display();
         modelDuck.performFly();
         modelDuck.performQuack();
+
+        new Thread(() -> System.out.println("Hello")).start();
+
+        Function<String, Integer> length = s -> s.length();
+        System.out.println(length.apply("Hello, world"));
     }
 }
