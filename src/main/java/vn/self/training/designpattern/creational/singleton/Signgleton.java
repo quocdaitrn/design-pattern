@@ -16,7 +16,7 @@ public class Signgleton {
             synchronized (Signgleton.class) {
                 instance = sInstance;
                 if (instance == null) {
-                    System.out.println("Create new Singleton instance");
+                    System.out.println("Create new Singleton instance by DaiTran");
                     sInstance = instance = new Signgleton();
                 }
             }
